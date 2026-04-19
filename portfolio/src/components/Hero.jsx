@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowDown, Globe, Link2, Users, Cpu, MapPin } from 'lucide-react'
+import { ArrowDown, Globe, Link2, Users, Cpu, MapPin, Zap } from 'lucide-react'
 
 const Hero = () => {
   const roles = ['AI Engineer', 'Data Scientist', 'ML Systems Designer', 'LLM Developer']
@@ -44,16 +44,17 @@ const Hero = () => {
             transition={{ delay: 0.3 }}
             className="hero-badge"
           >
-            <span className="badge-dot"></span>
-            Master's Candidate — Stony Brook University
+            <Zap size={14} />
+            <span>Master's Candidate — Stony Brook University</span>
           </motion.div>
           
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Sethuram Gautham</span>
+            <span className="greeting">Hi, I'm</span>
+            <span className="gradient-text">Sethuram Gautham</span>
           </h1>
           
           <div className="hero-role">
-            <Cpu size={24} className="role-icon" />
+            <Cpu size={20} className="role-icon" />
             <span className="role-text">{displayText}</span>
             <span className="cursor">|</span>
           </div>
@@ -90,14 +91,14 @@ const Hero = () => {
             transition={{ delay: 0.8 }}
             className="social-links"
           >
-            <a href="https://github.com/Sethuram2003" target="_blank" rel="noopener noreferrer">
-              <Globe size={24} />
+            <a href="https://github.com/Sethuram2003" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <Globe size={22} />
             </a>
-            <a href="https://www.linkedin.com/in/sethuramgautham/" target="_blank" rel="noopener noreferrer">
-              <Users size={24} />
+            <a href="https://www.linkedin.com/in/sethuramgautham/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <Users size={22} />
             </a>
-            <a href="https://www.linkedin.com/in/sethuramgautham/" target="_blank" rel="noopener noreferrer">
-              <Link2 size={24} />
+            <a href="https://www.linkedin.com/in/sethuramgautham/" target="_blank" rel="noopener noreferrer" title="Links">
+              <Link2 size={22} />
             </a>
           </motion.div>
         </motion.div>
@@ -112,8 +113,8 @@ const Hero = () => {
             <div className="avatar-ring"></div>
             <div className="avatar-ring ring-2"></div>
             <div className="avatar-ring ring-3"></div>
-            <div className="avatar-placeholder ai-avatar">
-              <Cpu size={64} />
+            <div className="avatar-inner">
+              <Cpu size={48} />
             </div>
           </div>
         </motion.div>

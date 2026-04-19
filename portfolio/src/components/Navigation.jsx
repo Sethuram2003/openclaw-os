@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Moon, Sun } from 'lucide-react'
+import Logo from './Logo'
 
 const Navigation = ({ theme, setTheme }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,6 +10,7 @@ const Navigation = ({ theme, setTheme }) => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -17,8 +19,8 @@ const Navigation = ({ theme, setTheme }) => {
     <nav className="navigation">
       <div className="nav-container">
         <a href="#home" className="nav-logo">
-          <span className="logo-icon">AC</span>
-          <span className="logo-text">Portfolio</span>
+          <Logo />
+          <span className="logo-text">SGR</span>
         </a>
 
         <div className="nav-links-desktop">
@@ -47,8 +49,8 @@ const Navigation = ({ theme, setTheme }) => {
 
       <motion.div
         className={`mobile-menu ${isOpen ? 'open' : ''}`}
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
+        initial={false}
+        animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.3 }}
       >
         {navLinks.map((link) => (
