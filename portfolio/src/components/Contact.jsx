@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Cpu } from 'lucide-react'
 
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Placeholder for form submission
-    alert('Form submission will be implemented with your personal details!')
+    alert('Contact form will be connected with your email!')
   }
 
   return (
@@ -19,7 +18,7 @@ const Contact = () => {
           className="section-header"
         >
           <span className="section-tag">Get In Touch</span>
-          <h2 className="section-title">Contact Me</h2>
+          <h2 className="section-title">Let's Build AI Together</h2>
         </motion.div>
 
         <div className="contact-content">
@@ -32,8 +31,9 @@ const Contact = () => {
           >
             <h3>Let's Work Together</h3>
             <p>
-              I'm always excited to work on new and challenging AI projects. 
-              Whether you have a project in mind or just want to chat, feel free to reach out!
+              I'm always excited to collaborate on innovative AI projects. Whether you 
+              need help with machine learning solutions, MLOps infrastructure, or want to 
+              discuss the latest in AI research — let's connect!
             </p>
             
             <div className="contact-details">
@@ -41,7 +41,7 @@ const Contact = () => {
                 <Mail size={24} />
                 <div>
                   <span className="contact-label">Email</span>
-                  <a href="mailto:alex.chen@example.com">alex.chen@example.com</a>
+                  <a href="mailto:sethuram.gautham@example.com">sethuram.gautham@example.com</a>
                 </div>
               </div>
               <div className="contact-item">
@@ -55,7 +55,7 @@ const Contact = () => {
                 <MapPin size={24} />
                 <div>
                   <span className="contact-label">Location</span>
-                  <span>San Francisco, CA</span>
+                  <span>India</span>
                 </div>
               </div>
             </div>
@@ -79,11 +79,11 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" placeholder="Project Inquiry" />
+              <input type="text" id="subject" placeholder="AI Project Collaboration" />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <textarea id="message" rows="5" placeholder="Tell me about your AI project..." required></textarea>
             </div>
             <motion.button
               type="submit"

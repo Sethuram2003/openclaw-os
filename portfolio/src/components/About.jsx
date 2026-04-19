@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { Brain, Award, Users, Code } from 'lucide-react'
+import { Brain, Award, Users, Cpu } from 'lucide-react'
 
 const About = () => {
   const stats = [
-    { icon: Code, number: '50+', label: 'Projects Completed' },
-    { icon: Award, number: '15+', label: 'Awards Won' },
-    { icon: Users, number: '30+', label: 'Happy Clients' },
-    { icon: Brain, number: '5+', label: 'Years Experience' },
+    { icon: Cpu, number: '50+', label: 'ML Models Deployed' },
+    { icon: Brain, number: '15+', label: 'AI Projects' },
+    { icon: Users, number: '10+', label: 'Happy Clients' },
+    { icon: Award, number: '3+', label: 'Years Experience' },
   ]
 
   return (
@@ -32,21 +32,19 @@ const About = () => {
             className="about-text"
           >
             <p>
-              I'm a passionate AI Engineer with over 5 years of experience in building 
-              machine learning models and deep learning systems. My journey started 
-              with a curiosity about how machines can learn from data, and it has 
-              evolved into a career focused on creating intelligent solutions.
+              I'm <strong>Sethuram Gautham</strong>, an AI Engineer passionate about building 
+              intelligent systems that solve real-world problems. My expertise spans across 
+              machine learning, deep learning, natural language processing, and MLOps.
             </p>
             <p>
-              Currently, I'm working on cutting-edge projects involving Large Language 
-              Models (LLMs), Computer Vision, and Reinforcement Learning. I believe 
-              in writing clean, maintainable code and following best practices to 
-              deliver robust AI solutions.
+              I specialize in developing end-to-end ML pipelines, from data processing and 
+              model training to deployment at scale. I'm experienced with transformer 
+              architectures, LLMs, computer vision, and building production-grade AI systems.
             </p>
             <p>
-              When I'm not training models, you'll find me exploring new research papers, 
-              contributing to open-source projects, or sharing knowledge through 
-              technical blog posts.
+              When I'm not training models or building AI infrastructure, you'll find me 
+              exploring the latest research papers, contributing to open-source ML projects, 
+              or optimizing model performance for better results.
             </p>
           </motion.div>
 

@@ -1,54 +1,54 @@
 import { motion } from 'framer-motion'
-import { Cpu, Database, Cloud, Code2, Brain } from 'lucide-react'
+import { Cpu, Brain, Database, Cloud, Terminal, LineChart } from 'lucide-react'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'AI & Machine Learning',
-      icon: Cpu,
+      icon: Brain,
       skills: [
         { name: 'Python', level: 95 },
         { name: 'TensorFlow', level: 90 },
-        { name: 'PyTorch', level: 88 },
-        { name: 'Scikit-learn', level: 92 },
-        { name: 'Keras', level: 85 },
-        { name: 'OpenCV', level: 80 },
+        { name: 'PyTorch', level: 92 },
+        { name: 'Scikit-learn', level: 88 },
+        { name: 'LangChain', level: 85 },
+        { name: 'Hugging Face', level: 88 },
       ],
     },
     {
       title: 'Deep Learning',
-      icon: Brain,
+      icon: Cpu,
       skills: [
-        { name: 'CNNs', level: 90 },
-        { name: 'RNNs/LSTMs', level: 85 },
-        { name: 'Transformers', level: 92 },
-        { name: 'GANs', level: 78 },
-        { name: 'Reinforcement Learning', level: 75 },
-        { name: 'NLP', level: 88 },
+        { name: 'CNNs / RNNs', level: 90 },
+        { name: 'Transformers', level: 95 },
+        { name: 'LLMs / GPT', level: 92 },
+        { name: 'Computer Vision', level: 85 },
+        { name: 'Reinforcement Learning', level: 80 },
+        { name: 'MLOps / Model Serving', level: 88 },
       ],
     },
     {
-      title: 'Data & MLOps',
+      title: 'Data Engineering',
       icon: Database,
       skills: [
         { name: 'SQL', level: 88 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'Apache Spark', level: 75 },
-        { name: 'Docker', level: 85 },
-        { name: 'Kubernetes', level: 72 },
-        { name: 'MLflow', level: 82 },
+        { name: 'Apache Spark', level: 80 },
+        { name: 'Pandas', level: 92 },
+        { name: 'Feature Engineering', level: 90 },
+        { name: 'Vector Databases', level: 85 },
+        { name: 'Data Pipeline', level: 88 },
       ],
     },
     {
-      title: 'Cloud & Deployment',
+      title: 'Infrastructure & Cloud',
       icon: Cloud,
       skills: [
-        { name: 'AWS', level: 85 },
-        { name: 'Google Cloud', level: 80 },
-        { name: 'Azure', level: 75 },
-        { name: 'FastAPI', level: 88 },
-        { name: 'Flask', level: 82 },
-        { name: 'Redis', level: 78 },
+        { name: 'AWS SageMaker', level: 85 },
+        { name: 'Docker / K8s', level: 88 },
+        { name: 'MLflow', level: 85 },
+        { name: 'FastAPI', level: 90 },
+        { name: 'Redis / Celery', level: 82 },
+        { name: 'CI/CD for ML', level: 85 },
       ],
     },
   ]
@@ -64,7 +64,7 @@ const Skills = () => {
           className="section-header"
         >
           <span className="section-tag">What I Know</span>
-          <h2 className="section-title">Skills & Expertise</h2>
+          <h2 className="section-title">AI Skills & Expertise</h2>
         </motion.div>
 
         <div className="skills-grid">

@@ -1,43 +1,49 @@
 import { motion } from 'framer-motion'
-import { Globe, ExternalLink } from 'lucide-react'
+import { Globe, ExternalLink, Cpu, Brain, Database, LineChart } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Neural Vision',
-      description: 'A state-of-the-art computer vision system capable of real-time object detection and image segmentation using YOLO and Mask R-CNN architectures.',
-      tags: ['PyTorch', 'OpenCV', 'TensorRT', 'CUDA'],
+      title: 'LLM-Powered Research Assistant',
+      description: 'A RAG-based system that processes research papers and answers complex queries using fine-tuned LLMs with citation verification.',
+      tags: ['LangChain', 'GPT-4', 'FAISS', 'FastAPI', 'React'],
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      icon: Brain,
     },
     {
-      title: 'LLM Chat Engine',
-      description: 'Enterprise-grade conversational AI platform built on fine-tuned Large Language Models with RAG integration and vector databases.',
-      tags: ['LangChain', 'FAISS', 'FastAPI', 'React'],
+      title: 'Real-time Object Detection API',
+      description: 'Production-grade YOLOv8 deployment with automatic model versioning, A/B testing, and horizontal scaling via Kubernetes.',
+      tags: ['YOLOv8', 'TensorRT', 'FastAPI', 'Docker', 'K8s'],
       gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      icon: Cpu,
     },
     {
-      title: 'Predictive Analytics',
-      description: 'Time series forecasting system for financial markets using transformer models and ensemble learning techniques.',
-      tags: ['TensorFlow', 'Prophet', 'Keras', 'SQL'],
+      title: 'NLP Text Classification Pipeline',
+      description: 'End-to-end pipeline for multi-label text classification with transformer models, automated training, and model registry.',
+      tags: ['PyTorch', 'Transformers', 'MLflow', 'Airflow', 'AWS'],
       gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+      icon: Database,
     },
     {
-      title: 'AI Content Generator',
-      description: 'Multi-modal content creation tool combining text, image, and code generation capabilities with diffusion models.',
-      tags: ['Stable Diffusion', 'GPT-4', 'DALL-E', 'Node.js'],
+      title: 'Time Series Forecasting Platform',
+      description: 'Financial forecasting system using ensemble of LSTM and Transformer models with real-time data ingestion and alerting.',
+      tags: ['TensorFlow', 'Prophet', 'Kafka', 'Redis', 'Grafana'],
       gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+      icon: LineChart,
     },
     {
-      title: 'Autonomous Drone AI',
-      description: 'Deep reinforcement learning system for autonomous drone navigation and obstacle avoidance in complex environments.',
-      tags: ['PyTorch', 'Unity ML-Agents', 'ROS', 'Python'],
+      title: 'Autonomous Drone Navigation',
+      description: 'Deep RL-based navigation system with computer vision for obstacle detection and path planning in complex environments.',
+      tags: ['PyTorch', 'OpenCV', 'ROS', 'Unity ML-Agents', 'NVIDIA Jetson'],
       gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+      icon: Cpu,
     },
     {
-      title: 'Medical Diagnosis AI',
-      description: 'HIPAA-compliant AI system for assisting in medical image analysis and preliminary diagnosis support.',
-      tags: ['TensorFlow', 'MONAI', 'Flask', 'PostgreSQL'],
+      title: 'Medical Image Analysis Suite',
+      description: 'HIPAA-compliant AI system for CT/MRI analysis using attention-based segmentation models with explainability features.',
+      tags: ['MONAI', 'TensorFlow', 'Flask', 'PostgreSQL', 'Docker'],
       gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
+      icon: Brain,
     },
   ]
 
@@ -52,7 +58,7 @@ const Projects = () => {
           className="section-header"
         >
           <span className="section-tag">My Work</span>
-          <h2 className="section-title">Featured Projects</h2>
+          <h2 className="section-title">AI Projects</h2>
         </motion.div>
 
         <div className="projects-grid">
@@ -66,6 +72,7 @@ const Projects = () => {
               className="project-card"
             >
               <div className="project-visual" style={{ background: project.gradient }}>
+                <project.icon size={48} className="project-icon-overlay" />
                 <h3 className="project-title-overlay">{project.title}</h3>
               </div>
               <div className="project-content">

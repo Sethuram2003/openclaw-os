@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion'
-import { ArrowDown, Globe, Link2, Users } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowDown, Globe, Link2, Users, Cpu, Atom } from 'lucide-react'
 
 const Hero = () => {
-  const roles = ['AI Engineer', 'Machine Learning Expert', 'Deep Learning Specialist', 'NLP Enthusiast']
+  const roles = ['AI Engineer', 'Deep Learning Expert', 'MLOps Specialist', 'NLP Research Engineer']
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
@@ -45,21 +45,23 @@ const Hero = () => {
             className="hero-badge"
           >
             <span className="badge-dot"></span>
-            Available for Opportunities
+            AI Engineer | Open to Opportunities
           </motion.div>
           
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Alex Chen</span>
+            Hi, I'm <span className="gradient-text">Sethuram Gautham</span>
           </h1>
           
           <div className="hero-role">
+            <Cpu size={24} className="role-icon" />
             <span className="role-text">{displayText}</span>
             <span className="cursor">|</span>
           </div>
           
           <p className="hero-description">
-            Building intelligent systems that bridge the gap between 
-            cutting-edge AI research and real-world applications.
+            Specializing in building intelligent systems that bridge cutting-edge 
+            AI research and production-ready applications. From transformer models 
+            to distributed ML infrastructure.
           </p>
           
           <motion.div
@@ -106,8 +108,8 @@ const Hero = () => {
             <div className="avatar-ring"></div>
             <div className="avatar-ring ring-2"></div>
             <div className="avatar-ring ring-3"></div>
-            <div className="avatar-placeholder">
-              <span>AC</span>
+            <div className="avatar-placeholder ai-avatar">
+              <Atom size={64} />
             </div>
           </div>
         </motion.div>
