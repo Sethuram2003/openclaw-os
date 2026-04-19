@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowDown, Globe, Link2, Users, Cpu, Atom } from 'lucide-react'
+import { ArrowDown, Globe, Link2, Users, Cpu, MapPin } from 'lucide-react'
 
 const Hero = () => {
-  const roles = ['AI Engineer', 'Deep Learning Expert', 'MLOps Specialist', 'NLP Research Engineer']
+  const roles = ['AI Engineer', 'Data Scientist', 'ML Systems Designer', 'LLM Developer']
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
@@ -45,7 +45,7 @@ const Hero = () => {
             className="hero-badge"
           >
             <span className="badge-dot"></span>
-            AI Engineer | Open to Opportunities
+            Master's Candidate — Stony Brook University
           </motion.div>
           
           <h1 className="hero-title">
@@ -58,10 +58,14 @@ const Hero = () => {
             <span className="cursor">|</span>
           </div>
           
+          <div className="hero-location">
+            <MapPin size={16} />
+            <span>New York, United States | Chennai, India</span>
+          </div>
+          
           <p className="hero-description">
-            Specializing in building intelligent systems that bridge cutting-edge 
-            AI research and production-ready applications. From transformer models 
-            to distributed ML infrastructure.
+            Building intelligent systems that bridge cutting-edge AI research and production-ready applications. 
+            Specializing in LLM systems, multi-agent architectures, and data-driven solutions.
           </p>
           
           <motion.div
@@ -74,7 +78,7 @@ const Hero = () => {
               View My Work
               <ArrowDown size={18} />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            <a href="https://github.com/Sethuram2003" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               <Globe size={18} />
               GitHub
             </a>
@@ -86,13 +90,13 @@ const Hero = () => {
             transition={{ delay: 0.8 }}
             className="social-links"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Sethuram2003" target="_blank" rel="noopener noreferrer">
               <Globe size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/sethuramgautham/" target="_blank" rel="noopener noreferrer">
               <Users size={24} />
             </a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/sethuramgautham/" target="_blank" rel="noopener noreferrer">
               <Link2 size={24} />
             </a>
           </motion.div>
@@ -109,7 +113,7 @@ const Hero = () => {
             <div className="avatar-ring ring-2"></div>
             <div className="avatar-ring ring-3"></div>
             <div className="avatar-placeholder ai-avatar">
-              <Atom size={64} />
+              <Cpu size={64} />
             </div>
           </div>
         </motion.div>

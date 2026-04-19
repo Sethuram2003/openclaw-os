@@ -1,9 +1,9 @@
 import { useState, Suspense } from 'react'
-import { motion } from 'framer-motion'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
 import ParticleBackground from './components/ParticleBackground'
@@ -30,11 +30,12 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <Contact />
       </main>
       <footer className="footer">
-        <p>© 2024 Sethuram Gautham — AI Engineer. Crafted with passion and precision.</p>
+        <p>© 2026 Sethuram Gautham Rajakumar — AI Engineer & Data Scientist</p>
       </footer>
     </div>
   )

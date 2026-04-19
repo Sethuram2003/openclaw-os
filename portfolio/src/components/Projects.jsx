@@ -1,49 +1,55 @@
 import { motion } from 'framer-motion'
-import { Globe, ExternalLink, Cpu, Brain, Database, LineChart } from 'lucide-react'
+import { Globe, ExternalLink, Cpu, Brain, Database, MessageSquare, Accessibility } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'LLM-Powered Research Assistant',
-      description: 'A RAG-based system that processes research papers and answers complex queries using fine-tuned LLMs with citation verification.',
-      tags: ['LangChain', 'GPT-4', 'FAISS', 'FastAPI', 'React'],
+      title: 'AdaptiMind — Stateful AI Agent',
+      description: 'Context-aware AI agent with dynamic memory using Letta (MemGPT) + Ollama. Achieves 90% improvement in personal info retrieval through persistent memory architecture.',
+      tags: ['Letta', 'Ollama', 'LangChain', 'Python'],
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
       icon: Brain,
+      link: 'https://github.com/Sethuram2003',
     },
     {
-      title: 'Real-time Object Detection API',
-      description: 'Production-grade YOLOv8 deployment with automatic model versioning, A/B testing, and horizontal scaling via Kubernetes.',
-      tags: ['YOLOv8', 'TensorRT', 'FastAPI', 'Docker', 'K8s'],
+      title: 'Speech Diarization API',
+      description: 'Production microservice for speaker diarization using PyAnnote 3.1 + NVIDIA Audio Flamingo-3. Fully containerized with Docker for privacy-preserving audio processing.',
+      tags: ['FastAPI', 'PyAnnote', 'NVIDIA', 'Docker'],
       gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
       icon: Cpu,
+      link: 'https://github.com/Sethuram2003/Speech-Diarization',
     },
     {
-      title: 'NLP Text Classification Pipeline',
-      description: 'End-to-end pipeline for multi-label text classification with transformer models, automated training, and model registry.',
-      tags: ['PyTorch', 'Transformers', 'MLflow', 'Airflow', 'AWS'],
+      title: 'MCP-Ollama Server',
+      description: 'Privacy-first local AI infrastructure bridging MCP protocol with Ollama. Enables HIPAA-compliant, air-gapped AI tool use for legal, healthcare, and finance.',
+      tags: ['MCP', 'Ollama', 'Python', 'Google Calendar API'],
       gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
       icon: Database,
+      link: 'https://github.com/sethuram2003/mcp-ollama_server',
     },
     {
-      title: 'Time Series Forecasting Platform',
-      description: 'Financial forecasting system using ensemble of LSTM and Transformer models with real-time data ingestion and alerting.',
-      tags: ['TensorFlow', 'Prophet', 'Kafka', 'Redis', 'Grafana'],
+      title: 'AI WhatsApp Bot',
+      description: 'Production agentic messaging system using LangGraph ReAct pattern + Meta Cloud API. Features real-time web search, vision capabilities, and per-user memory.',
+      tags: ['LangGraph', 'FastAPI', 'Groq', 'Docker'],
       gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-      icon: LineChart,
+      icon: MessageSquare,
+      link: '#',
     },
     {
-      title: 'Autonomous Drone Navigation',
-      description: 'Deep RL-based navigation system with computer vision for obstacle detection and path planning in complex environments.',
-      tags: ['PyTorch', 'OpenCV', 'ROS', 'Unity ML-Agents', 'NVIDIA Jetson'],
+      title: 'Tamil Braille Recognition Device',
+      description: 'Patent-holder edge computing device for Tamil Braille to text/audio conversion. 97.45% accuracy using custom TamilBrailleNet CNN architecture on Raspberry Pi.',
+      tags: ['PyTorch', 'Computer Vision', 'Raspberry Pi', 'TTS'],
       gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-      icon: Cpu,
+      icon: Accessibility,
+      link: '#',
     },
     {
-      title: 'Medical Image Analysis Suite',
-      description: 'HIPAA-compliant AI system for CT/MRI analysis using attention-based segmentation models with explainability features.',
-      tags: ['MONAI', 'TensorFlow', 'Flask', 'PostgreSQL', 'Docker'],
+      title: 'Process Monitor + Calendar',
+      description: 'Windows background process tracker that automatically logs application usage to Google Calendar. Built with Python, psutil, and Google Calendar API v3.',
+      tags: ['Python', 'psutil', 'SQLite', 'Google Calendar API'],
       gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
-      icon: Brain,
+      icon: Database,
+      link: 'https://github.com/Sethuram2003/EventTracker_googleCalendar',
     },
   ]
 
@@ -58,7 +64,7 @@ const Projects = () => {
           className="section-header"
         >
           <span className="section-tag">My Work</span>
-          <h2 className="section-title">AI Projects</h2>
+          <h2 className="section-title">Featured Projects</h2>
         </motion.div>
 
         <div className="projects-grid">
@@ -84,10 +90,10 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a href="#" className="project-link">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                     <Globe size={20} />
                   </a>
-                  <a href="#" className="project-link">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                     <ExternalLink size={20} />
                   </a>
                 </div>
